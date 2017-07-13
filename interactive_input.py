@@ -1,4 +1,7 @@
 from __future__ import print_function
+
+from builtins import input
+
 import sys
 import time
 import datetime
@@ -8,34 +11,34 @@ def goscriptup():
     print("\033[A                             \033[A \r")
 
 def input_time_rt_update(yearm):
-    inputtime = datetime.datetime(2000,01,01,00,00)
+    inputtime = datetime.datetime(2000,1,1,0,0)
     print('%s' %inputtime)
     #
-    inputtime = inputtime.replace(year=yearm)###int(raw_input("Year?: ")))
-    goscriptup()
-    goscriptup()
-    #
-    print('%s' %inputtime)
-    #
-    inputtime = inputtime.replace(month=int(raw_input("Month?: ")))
+    inputtime = inputtime.replace(year=yearm)###int(input("Year?: ")))
     goscriptup()
     goscriptup()
     #
     print('%s' %inputtime)
     #
-    inputtime = inputtime.replace(day=int(raw_input("Day?: ")))
+    inputtime = inputtime.replace(month=int(input("Month?: ")))
     goscriptup()
     goscriptup()
     #
     print('%s' %inputtime)
     #
-    inputtime = inputtime.replace(hour=int(raw_input("Hour?: ")))
+    inputtime = inputtime.replace(day=int(input("Day?: ")))
     goscriptup()
     goscriptup()
     #
     print('%s' %inputtime)
     #
-    inputtime = inputtime.replace(minute=int(raw_input("Minute?: ")))
+    inputtime = inputtime.replace(hour=int(input("Hour?: ")))
+    goscriptup()
+    goscriptup()
+    #
+    print('%s' %inputtime)
+    #
+    inputtime = inputtime.replace(minute=int(input("Minute?: ")))
     goscriptup()
     goscriptup()
     #
@@ -43,16 +46,16 @@ def input_time_rt_update(yearm):
     #
     return inputtime
 
-def printdict(dict):
+def printdict(dicta):
     print('index\t',end='')
-    for key in dict[dict.keys()[0]].keys():
+    for key in list(dicta[list(dicta.keys())[0]].keys()):
         print('|%s\t' %key,end='')
     print('')
     #
-    for key in dict.keys():
+    for key in list(dicta.keys()):
         print('%s\t' %key,end='')
-        for key2 in dict[dict.keys()[0]].keys():
-            print('|%s\t' %dict[key][key2],end='')
+        for key2 in list(dicta[list(dicta.keys())[0]].keys()):
+            print('|%s\t' %dicta[key][key2],end='')
         print('')
 
 
@@ -62,13 +65,13 @@ def input_dust(dataclasses, datatypes):
         datadict[dataclasses[i]] = dict();
         for j in range(0,len(datatypes)):
             print('%s of %s'%(datatypes[j], dataclasses[i]))
-            datadict[dataclasses[i]][datatypes[j]] = int(raw_input(" :"))
+            datadict[dataclasses[i]][datatypes[j]] = int(input(" :"))
             goscriptup()
             goscriptup()
     printdict(datadict)
     return datadict
 
-
 if __name__ == "__main__":
+    #    diction testdata
+    #    diction = {'PM2.5': {'SUM': 2, 'SIGMA': 3}, 'PM10': {'SUM': 4, 'SIGMA': 5}}
     print("")
-    #diction = input_dust(["PM2.5", "PM10"], ["SUM", "SIGMA"])

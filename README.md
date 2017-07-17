@@ -34,7 +34,7 @@ If your default python version is lower than 3.*, maybe you have to use 'python3
 $ git clone https://github.com/PNU-HIPEx/Dust-Note.git
 ```
 
-###초기 설정
+### 초기 설정
 #### 구글에서의 설정
 ##### Autentification
 <http://gspread.readthedocs.io/en/latest/oauth2.html>
@@ -110,7 +110,7 @@ $ python main_interactive.py
 
 대화형 프로그램은, 단순 업로드 프로그램에서의 각각의 변수를 순서대로 입력할 수 있도록 한 스크립트이며, 실행하였을 때, 다음과 같은 안내를 볼 수 있다.
 
-```bash
+```
 ===================================
 Dust Monitoring Data Sending Script
 date?

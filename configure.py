@@ -44,7 +44,7 @@ if __name__ == "__main__":
     print("Dust Monitoring Script Configure")
     print("You can set Monitoring Location, ParticleSize, CollectingInformation, GoogleSpreadsheet\'s Filename\n")
     print("for all of Question, it will show original value of configure file, you can leave it at that or overwrite each configuration")
-    print("just press RETURN to leave, put information to overwrite\n")
+    print("At each question of NUMBERS just press RETURN to leave, put information to overwrite\n")
     with open('cfg.json', 'r') as infile:
         originaldic = json.load(infile)
     outputjson = dict()

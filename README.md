@@ -1,7 +1,8 @@
 # Dust-Note
 Dust note with python, google gspread
 
-##필요사항
+## 필요사항
+
 ### 파이썬 인터프리터
 * Python 3+
 

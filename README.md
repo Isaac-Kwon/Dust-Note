@@ -1,7 +1,8 @@
 # Dust-Note
 Dust note with python, google gspread
 
-##필요사항
+## 필요사항
+
 ### 파이썬 인터프리터
 * Python 3+
 
@@ -27,13 +28,13 @@ If your default python version is lower than 3.*, maybe you have to use 'pip3' i
 
 If your default python version is lower than 3.*, maybe you have to use 'python3' instead of 'python'
 
-###설치
+### 설치
 
 ```bash
 $ git clone https://github.com/PNU-HIPEx/Dust-Note.git
 ```
 
-###초기 설정
+### 초기 설정
 #### 구글에서의 설정
 ##### Autentification
 <http://gspread.readthedocs.io/en/latest/oauth2.html>
@@ -44,7 +45,7 @@ $ git clone https://github.com/PNU-HIPEx/Dust-Note.git
 * 다운받은 JSON 파일을 메모장으로 연다.
 * ``"client_id":`` 뒤에 표기된 이메일로, 스프레드시트를 공유한다.
 
-####내부 설정용 JSON 파일 생성
+#### 내부 설정용 JSON 파일 생성
 ```bash
 $ cd Dust-Note
 $ python configure.py
@@ -109,7 +110,7 @@ $ python main_interactive.py
 
 대화형 프로그램은, 단순 업로드 프로그램에서의 각각의 변수를 순서대로 입력할 수 있도록 한 스크립트이며, 실행하였을 때, 다음과 같은 안내를 볼 수 있다.
 
-```bash
+```
 ===================================
 Dust Monitoring Data Sending Script
 date?

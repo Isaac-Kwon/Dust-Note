@@ -28,7 +28,7 @@ If your default python version is lower than 3.*, maybe you have to use 'pip3' i
 
 If your default python version is lower than 3.*, maybe you have to use 'python3' instead of 'python'
 
-###설치
+### 설치
 
 ```bash
 $ git clone https://github.com/PNU-HIPEx/Dust-Note.git
@@ -45,7 +45,7 @@ $ git clone https://github.com/PNU-HIPEx/Dust-Note.git
 * 다운받은 JSON 파일을 메모장으로 연다.
 * ``"client_id":`` 뒤에 표기된 이메일로, 스프레드시트를 공유한다.
 
-####내부 설정용 JSON 파일 생성
+#### 내부 설정용 JSON 파일 생성
 ```bash
 $ cd Dust-Note
 $ python configure.py

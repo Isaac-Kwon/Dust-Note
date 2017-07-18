@@ -26,7 +26,7 @@ with open('cfg.json', 'r') as cfgfile:
 
 if sys.argv[1] == '-h' or sys.argv[1] == '--help':
     print("HELP DISPLAY for Input Parameter")
-    print("python main.py timestamp(0 or YYYY/MM/DD-HH:MM) ", end='')
+    print("python main.py timestamp(0 or YYYY-MM-DD HH:MM) ", end='')
     if len(cfgdata["Locations"])!=1:
         print('LocationNumber ', end='')
     for i in range(0,len(cfgdata['Type1'])):
@@ -46,7 +46,7 @@ if sys.argv[1] == '-h' or sys.argv[1] == '--help':
 if sys.argv[1] == '0':
     TimeStamp = datetime.datetime.now()#.strftime('%Y/%m/%d-%H:%M')
 else:
-    TimeStamp = datetime.datetime.strptime(sys.argv[1],'%Y/%m/%d-%H:%M')
+    TimeStamp = datetime.datetime.strptime(sys.argv[1],'%Y-%m-%d %H:%M')
 
 dustdata = dict()
 
@@ -63,4 +63,4 @@ for i in range(0,len(cfgdata['Type1'])):
         dustdata[cfgdata['Type1'][i]][cfgdata['Type2'][j]] = int(sys.argv[k])
         k = k+1
 
-google_upload.Upload_dict('TimeStamp', TimeStamp.strftime('%Y/%m/%d-%H:%M'), location, dustdata)
+google_upload.Upload_dict('TimeStamp', TimeStamp.strftime('%Y-%m-%d %H:%M'), location, dustdata)

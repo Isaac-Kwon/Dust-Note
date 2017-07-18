@@ -56,7 +56,7 @@ dustdata = interactive_input.input_dust(dataclasses, datatypes)
 #print(dustdata)
 
 print('\nSending Data to Google')
-google_upload.Upload_dict('TimeStamp', input_time.strftime('%Y/%m/%d-%H:%M'), locations[loc], dustdata)
+google_upload.Upload_dict('TimeStamp', input_time.strftime('%Y-%m-%d %H:%M'), locations[loc], dustdata)
 goscriptup()
 print('Google Data Transfer Completed')
 

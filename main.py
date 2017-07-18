@@ -54,7 +54,7 @@ if len(cfgdata["Locations"])==1:
     location = cfgdata["Locations"][0]
 else:
     k = 3
-    location = cfgdata["Locations"][sys.argv[2]]
+    location = cfgdata["Locations"][int(sys.argv[2])]
 
 for i in range(0,len(cfgdata['Type1'])):
     dustdata[cfgdata['Type1'][i]] = dict()

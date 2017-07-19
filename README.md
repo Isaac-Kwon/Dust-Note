@@ -58,8 +58,8 @@ $ python configure.py
 |----------------|--------|---|---|--------|
 | Location       | 1      |   | 1 | Inside |
 |                |        |   |   |        |
-| Particle Types | 3      |   | 1 | 0.1    |
-|                |        |   | 2 | 0.3    |
+| Particle Types | 3      |   | 1 | 0.3    |
+|                |        |   | 2 | 0.5    |
 |                |        |   | 3 | 5.0    |
 |                |        |   |   |        |
 | Data Types     | 1      |   | 1 | SUM    |

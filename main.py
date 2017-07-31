@@ -36,7 +36,9 @@ if len(sys.argv) == 1:
     exit()
 
 if sys.argv[1] == '-h' or sys.argv[1] == '--help':
-    print("HELP DISPLAY for Input Parameter")
+    print("Help for Dust Monitoring Input Python Script")
+    print("1. to use interactive input: \"python main.py\" or \"python main_interactive.py\"")
+    print("2. to use command line input: ", end='\n')
     print("python main.py timestamp(0 or YYYY-MM-DD HH:MM) ", end='')
     if len(cfgdata["Locations"])!=1:
         print('LocationNumber ', end='')
@@ -51,6 +53,7 @@ if sys.argv[1] == '-h' or sys.argv[1] == '--help':
             print("%d: %s" %(locationind, location))
             locationind = locationind + 1
     exit()
+
 
 ########################################################################
 

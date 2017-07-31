@@ -2,10 +2,23 @@
 
 from __future__ import print_function
 from builtins import input
+
+import os
 import sys
 from oauth2client.service_account import ServiceAccountCredentials
 import gspread
 import json
+
+if sys.version_info.major<3:
+    print("Python version is too low, use over python 3")
+    exit()
+
+from builtins import input
+
+if not(os.path.isfile('cfg.json')):
+    print("No configure file, please configure first.")
+    print("\"python configure.py\"")
+    exit();
 
 with open('cfg.json', 'r') as cfgfile:
     cfgFilename = json.load(cfgfile)["SheetFile Name"]

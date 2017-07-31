@@ -1,10 +1,10 @@
 #-*- coding: utf-8 -*-
 from __future__ import print_function
-import os
+import os, sys
 import sys
 import datetime
 import json
-from builtins import input
+
 import google_upload
 
 #Input Argument
@@ -20,6 +20,11 @@ import google_upload
 #sys.argv[1] #first Value
 #sys.argv[2] #second Value
 #sys.argv[3] #third Value
+if sys.version_info.major<3:
+    print("Python version is too low, use over python 3")
+    exit()
+
+from builtins import input
 
 with open('cfg.json', 'r') as cfgfile:
     cfgdata = json.load(cfgfile)

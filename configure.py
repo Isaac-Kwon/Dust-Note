@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 
 from __future__ import print_function
-from builtins import input
+
 import sys,os
 import json
 
@@ -12,6 +12,13 @@ import json
 #dataclasses : size of particles
 #datatypes : SUM, SIGMA or etc
 #Locations
+
+if sys.version_info.major<3:
+    print("Python version is too low, use over python 3")
+    exit()
+
+from builtins import input
+
 def initialize():
     if not os.path.exists("cfg.json"):
         with open('cfg.json','w') as genfile:

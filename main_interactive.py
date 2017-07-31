@@ -1,8 +1,8 @@
 #-*- coding: utf-8 -*-
 from __future__ import print_function
-import os
+import os, sys
 import datetime
-from builtins import input
+
 import json
 
 import interactive_input
@@ -10,6 +10,12 @@ import google_upload
 
 def goscriptup():
     print("\033[A                             \033[A")
+
+if sys.version_info.major<3:
+    print("Python version is too low, use over python 3")
+    exit()
+
+from builtins import input
 
 with open('cfg.json', 'r') as cfgfile:
     cfgdata = json.load(cfgfile)

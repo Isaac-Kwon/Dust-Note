@@ -39,12 +39,17 @@ print("Time : %s" %input_time)
 
 ########################################################################
 print('')
-print('Location?')
-for i in range(0,len(locations)):
-    print("%d: %s" %(i+1,locations[i]))
 
-loc2 = input('')
-loc = int(loc2)-1
+if len(locations) == 1:
+    loc = 0
+    print('')
+else:
+    print('Location?')
+    for i in range(0,len(locations)):
+        print("%d: %s" %(i+1,locations[i]))
+
+    loc2 = input('')
+    loc = int(loc2)-1
 
 goscriptup()
 print('Location: %s' %locations[int(loc)])

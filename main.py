@@ -24,6 +24,12 @@ import google_upload
 with open('cfg.json', 'r') as cfgfile:
     cfgdata = json.load(cfgfile)
 
+if len(sys.argv) == 1:
+    print('')
+    print('if you help to use program, do \"python main.py --help\" or \"python main.py -help\"\n RUN IN INTERACTIVE MODE\n')
+    os.system('python3 main_interactive.py')
+    exit()
+
 if sys.argv[1] == '-h' or sys.argv[1] == '--help':
     print("HELP DISPLAY for Input Parameter")
     print("python main.py timestamp(0 or YYYY-MM-DD HH:MM) ", end='')
